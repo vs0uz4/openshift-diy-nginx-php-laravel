@@ -1,4 +1,4 @@
-# boekkooi/openshift-nginx-php-laravel
+# boekkooi/openshift-nginx-php5.6-laravel
 This is a sample repository to get nginx + php fpm running on openshift.
 
 More information about openshift: https://openshift.redhat.com/
