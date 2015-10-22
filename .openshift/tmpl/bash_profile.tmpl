@@ -5,7 +5,7 @@ export OPENSHIFT_RUNTIME_DIR=${OPENSHIFT_DIY_DIR}/runtime/
 alias npm='${OPENSHIFT_RUNTIME_DIR}/bin/npm'
 alias php='${OPENSHIFT_RUNTIME_DIR}/php5/bin/php'
 alias php-fpm='${OPENSHIFT_RUNTIME_DIR}/php5/sbin/php-fpm'
-alias composer='${OPENSHIFT_RUNTIME_DIR}/composer/bin/composer.phar'
+alias composer='php ${OPENSHIFT_RUNTIME_DIR}/composer/bin/composer.phar'
 
 # I can't override PHPRC here so notify the user
 if [ -d ${OPENSHIFT_ROCKMONGO_DIR} ];then
