@@ -8,7 +8,7 @@ function install_composer() {
     curl -s https://getcomposer.org/installer | php -- --quiet --install-dir=${OPENSHIFT_DATA_DIR}/composer/bin
     
     # If not exist vendor folder, run composer install
-    if [ ! -d ${OPENSHIFT_REPO_DIR}vendor ]; then
+    if [ ! -d ${OPENSHIFT_REPO_DIR}/vendor ]; then
         echo "Running 'composer install' and 'php artisan migrate --force'..."
         pushd ${OPENSHIFT_REPO_DIR} > /dev/null
         composer install
