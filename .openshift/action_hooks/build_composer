@@ -9,7 +9,7 @@ function install_composer() {
     
     echo "Running 'composer install' and 'php artisan migrate --force' ..."
     pushd ${OPENSHIFT_REPO_DIR}
-    composer install
+    composer install --trace
     php artisan migrate --force
 }
 
