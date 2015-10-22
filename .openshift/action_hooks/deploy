@@ -28,3 +28,4 @@ rm -rf ${BUILD_DIR}
 bash_profile=${OPENSHIFT_DATA_DIR}/.bash_profile
 echo "Copy bash profile."
 cp ${TEMPLATE_DIR}/bash_profile.tmpl ${bash_profile}
+
