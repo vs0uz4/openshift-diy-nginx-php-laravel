@@ -8,7 +8,7 @@ set -e
 if [ ! -d ${OPENSHIFT_REPO_DIR}vendor ]; then
   echo "Running 'composer install' and 'php artisan migrate --force'..."
   pushd ${OPENSHIFT_REPO_DIR} > /dev/null
-  php ${OPENSHIFT_RUNTIME_DIR}/composer/bin/composer.phar install
+  composer install
   php artisan migrate --force
   popd > /dev/null
 fi
