@@ -6,6 +6,11 @@ function install_composer() {
     mkdir -p ${OPENSHIFT_DATA_DIR}/composer/bin
     export COMPOSER_HOME="$OPENSHIFT_DATA_DIR/.composer"
     curl -s https://getcomposer.org/installer | php -- --quiet --install-dir=${OPENSHIFT_DATA_DIR}/composer/bin
+    
+    echo "Running 'composer install' and 'php artisan migrate --force' ..."
+    pushd ${OPENSHIFT_REPO_DIR}
+    composer install
+    php artisan migrate --force
 }
 
 function check_composer() {
