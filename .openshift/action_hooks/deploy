@@ -108,9 +108,9 @@ fi
 # If not exist vendor folder, run composer install
 if [ ! -d ${OPENSHIFT_REPO_DIR}vendor ]; then
   cd ${OPENSHIFT_REPO_DIR}
-  echo "Running 'composer install' 'php artisan migrate --force' ..."
+  echo "Running 'composer install'..."
   php ${OPENSHIFT_DATA_DIR}/composer/bin/composer.phar install
   
-  echo "Running 'composer install' 'php artisan migrate --force' ..."
+  echo "Running 'php artisan migrate --force' ..."
   php artisan migrate --force
 fi
