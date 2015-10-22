@@ -6,6 +6,6 @@
 
 if [[ "$OPENSHIFT_PHP_VERSION" == "5.4" ]]; then
   echo "ERROR: This quickstart is not compatible with PHP 5.4"
-  echo "ERROR: Please use the php-5.6.6 application type."
+  echo "ERROR: Please use the php-5.5.30 application type or above."
   exit 1
 fi
