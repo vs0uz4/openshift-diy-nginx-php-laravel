@@ -1,4 +1,4 @@
-# boekkooi/openshift-nginx-php5.6-laravel5.1.11-nodejs
+# boekkooi/openshift-nginx-php-laravel-nodejs-phalcon-composer
 This is a sample repository to get nginx + php fpm running on openshift.
 
 More information about openshift: https://openshift.redhat.com/

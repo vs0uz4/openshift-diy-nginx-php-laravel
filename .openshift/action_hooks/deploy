@@ -104,3 +104,12 @@ ln -sf ${OPENSHIFT_LOG_DIR}   ${OPENSHIFT_DATA_DIR}storage/logs
 if [  -f ${OPENSHIFT_REPO_DIR}.openshift/.env ]; then
   cp -f ${OPENSHIFT_REPO_DIR}.openshift/.env ${OPENSHIFT_REPO_DIR}/.env
 fi
+
+# If not exist vendor folder, run composer install
+if [ ! -d ${OPENSHIFT_REPO_DIR}vendor ]; then
+  composer install
+  echo "Running 'php artisan migrate --force'..."
+  pushd ${OPENSHIFT_REPO_DIR} > /dev/null
+  php artisan migrate --force
+  popd > /dev/null
+fi
