@@ -3,3 +3,12 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 set -e
+
+# If not exist vendor folder, run composer install
+if [ ! -d ${OPENSHIFT_REPO_DIR}vendor ]; then
+  echo "Running 'php artisan migrate --force'..."
+  pushd ${OPENSHIFT_REPO_DIR} > /dev/null
+  composer install
+  php artisan migrate --force
+  popd > /dev/null
+fi
